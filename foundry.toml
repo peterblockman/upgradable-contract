@@ -1,0 +1,21 @@
+# Default profile configuration for Foundry project
+[profile.default]
+# Directory containing smart contract source files (.sol)
+src = "src"
+# Directory where compiled artifacts will be stored
+out = "out"
+# Directory containing project dependencies
+libs = [ "lib" ]
+# Enables Foreign Function Interface for executing commands during testing
+# WARNING: Security sensitive - but we need it for testing upgradeable contracts
+# See https://docs.openzeppelin.com/upgrades-plugins/foundry-upgrades#before_running
+ffi = true
+# Enables generation of Abstract Syntax Tree during compilation
+ast = true
+# Generates build info files containing compilation metadata
+build_info = true
+# Additional compilation outputs - generates storage layout information
+# useful for understanding contract storage patterns and upgradeability
+extra_output = [ "storageLayout" ]
+
+# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
